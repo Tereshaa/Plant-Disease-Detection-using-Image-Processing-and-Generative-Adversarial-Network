@@ -19,6 +19,7 @@ To install the requirments
 ```bash
 pip install -r requirements.txt
 ```
+To run the app in ur Terminal
 ```bash
 python -m streamlit run main.py
 ```
