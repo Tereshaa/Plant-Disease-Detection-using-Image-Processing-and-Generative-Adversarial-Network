@@ -32,13 +32,13 @@ def model_prediction(test_image, model_choice):
     segmented_image = segment_image(image)  # Segment the image first
 
     # Choose the CNN model and class names based on selection
-    if model_choice == "GAN-Segmented CNN":
+    if model_choice == "Segmented CNN":
         cnn_model = gan_segmented_cnn
         class_names = ['Tomato_Spider_mites', 'Tomato_Yellow_Leaf_Curl_Virus', 'Tomato_Late_blight', 'Tomato_Early_blight',
                        'Tomato_Mosaic_virus', 'Tomato_Septoria_leafspot', 'Tomato_Bacterial_spot', 'Tomato_Healthy',
                        'Tomato_Target_Spot', 'Tomato_Leaf_Mold']
 
-    elif model_choice == "Segmented CNN":
+    elif model_choice == "GAN-Segmented CNN":
         cnn_model = segmented_cnn
         class_names = [
             'Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Healthy',
