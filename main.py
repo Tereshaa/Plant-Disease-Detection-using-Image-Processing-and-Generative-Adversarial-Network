@@ -5,9 +5,9 @@ import numpy as np
 # Load models
 @st.cache_resource
 def load_models():
-    gan_segmented_cnn = tf.keras.models.load_model("MODELS/best_gen_segmented_cnn.keras")
-    segmented_cnn = tf.keras.models.load_model("MODELS/best_segmented_cnn.keras")
-    segmentation_model = tf.keras.models.load_model("MODELS/best_unet_model.keras")
+    gan_segmented_cnn = tf.keras.models.load_model("models/best_gen_segmented_cnn.keras")
+    segmented_cnn = tf.keras.models.load_model("models/best_segmented_cnn.keras")
+    segmentation_model = tf.keras.models.load_model("models/best_unet_model.keras")
     return gan_segmented_cnn, segmented_cnn, segmentation_model
 
 gan_segmented_cnn, segmented_cnn, segmentation_model = load_models()
@@ -90,7 +90,7 @@ elif app_mode == "Disease Recognition":
     st.header("Disease Recognition")
 
     # Model Selection
-    model_choice = st.selectbox("Choose Model", ["GAN-Segmented CNN", "Segmented CNN"])
+    model_choice ="GAN-Segmented CNN"
 
     test_image = st.file_uploader("Choose an Image:")
     if test_image:
